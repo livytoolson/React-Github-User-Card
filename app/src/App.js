@@ -24,9 +24,9 @@ class App extends React.Component {
 
     axios.get('https://api.github.com/users/livytoolson/followers')
       .then(res => {
-        // console.log(res.data)
+        // console.log(res.data[0].login)
         this.setState({
-          followerData: res.data
+          followerData: res.data[0].login
         })
       })
       .catch(err => {
@@ -42,7 +42,9 @@ class App extends React.Component {
         <p><text style={{fontWeight: "bold"}}>Location:</text> {this.state.userData.location}</p>
         <p><text style={{fontWeight: "bold"}}>User Profile:</text> {this.state.userData.html_url}</p>
         <p><text style={{fontWeight: "bold"}}>Followers:</text> {this.state.userData.followers}</p>
-        <p>{this.state.followerData.login}</p>
+        <ul>
+          <li>{this.state.followerData}</li>
+        </ul>
         <p><text style={{fontWeight: "bold"}}>Following:</text> {this.state.userData.following}</p>
         <p><text style={{fontWeight: "bold"}}>Bio:</text> {this.state.userData.bio}</p>
       </div>
