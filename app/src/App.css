@@ -24,7 +24,16 @@ time, mark, audio, video {
 body {
   background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 }
- .card {
+h1 {
+  font-size: 5rem;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.card {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -46,4 +55,11 @@ body {
   font-size: 1.8rem;
   font-style: italic;
   margin: 3px 0 10px;
+}
+img {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
