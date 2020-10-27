@@ -63,3 +63,17 @@ img {
   flex-direction: row;
   justify-content: space-evenly;
 }
+.list {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.list ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+p span {
+  font-weight: bold;
+}

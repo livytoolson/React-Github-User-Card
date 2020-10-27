@@ -42,16 +42,16 @@ class App extends React.Component {
         <div className="card">
           <h4 className="name">{this.state.userData.name}</h4>
           <h5 className="username">{this.state.userData.login}</h5>
-          <p><text style={{fontWeight: "bold"}}>Location:</text> {this.state.userData.location}</p>
-          <p><text style={{fontWeight: "bold"}}>User Profile:</text> {this.state.userData.html_url}</p>
-          <p><text style={{fontWeight: "bold"}}>Followers:</text> {this.state.userData.followers}</p>
-          <ul>
+          <p><span>Location:</span> {this.state.userData.location}</p>
+          <p><span>User Profile:</span> {this.state.userData.html_url}</p>
+          <p><span>Followers:</span> {this.state.userData.followers}</p>
+          <ul className="list">
             {this.state.followerData.map((item) => {
-              return <li>{item.login}</li>
+              return <li key={item.id}>{item.login}</li>
             })}
           </ul>
-          <p><text style={{fontWeight: "bold"}}>Following:</text> {this.state.userData.following}</p>
-          <p><text style={{fontWeight: "bold"}}>Bio:</text> {this.state.userData.bio}</p>
+          <p><span>Following:</span> {this.state.userData.following}</p>
+          <p><span>Bio:</span> {this.state.userData.bio}</p>
           <div className="img">
             <img src={this.state.userData.avatar_url} alt="User Avator"></img>
           </div>
