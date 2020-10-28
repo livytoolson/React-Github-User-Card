@@ -40,18 +40,20 @@ class App extends React.Component {
       <div className="app">
         <h1>Github Cards</h1>
         <div className="card">
-          <h4 className="name">{this.state.userData.name}</h4>
-          <h5 className="username">{this.state.userData.login}</h5>
-          <p><span>Location:</span> {this.state.userData.location}</p>
-          <p><span>User Profile:</span> {this.state.userData.html_url}</p>
-          <p><span>Followers:</span> {this.state.userData.followers}</p>
-          <ul className="list">
-            {this.state.followerData.map((item) => {
-              return <li key={item.id}>{item.login}</li>
-            })}
-          </ul>
-          <p><span>Following:</span> {this.state.userData.following}</p>
-          <p><span>Bio:</span> {this.state.userData.bio}</p>
+          <div className="info">
+            <h4 className="name">{this.state.userData.name}</h4>
+            <h5 className="username">{this.state.userData.login}</h5>
+            <p><span>Location:</span> {this.state.userData.location}</p>
+            <p><span>User Profile:</span> {this.state.userData.html_url}</p>
+            <p><span>Followers:</span> {this.state.userData.followers}</p>
+            <ul className="list">
+              {this.state.followerData.map((item) => {
+                return <li key={item.id}>{item.login}</li>
+              })}
+            </ul>
+            <p><span>Following:</span> {this.state.userData.following}</p>
+            <p><span>Bio:</span> {this.state.userData.bio}</p>
+          </div>
           <div className="img">
             <img src={this.state.userData.avatar_url} alt="User Avator"></img>
           </div>

@@ -1,4 +1,16 @@
-/* CSS RESET */
+/* 
+.card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px -2px #000;
+  background-color: #FFF;
+  margin: 30px;
+} */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,10 +32,38 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-/* APP STYLING */
+html, body, * {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
 body {
   background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 }
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px -2px #000;
+  background-color: #FFF;
+  margin-bottom: 30px;
+}
+
 h1 {
   font-size: 5rem;
   color: white;
@@ -33,35 +73,27 @@ h1 {
   align-items: center;
   padding-top: 10px;
 }
-.card {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 5px;
-  box-shadow: 0 1px 6px -2px #000;
-  background-color: #FFF;
-  margin: 30px;
+
+.card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 3px;
+  margin-right: 20px;
 }
+
 .card .name {
   font-size: 3.4rem;
 }
+
 .card p {
   font-size: 1.4rem;
   margin-bottom: 3px;
 }
+
 .card .username {
   font-size: 1.8rem;
   font-style: italic;
   margin: 3px 0 10px;
-}
-img {
-  width: 10rem;
-  height: 10rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
 }
 .list {
   display:flex;
