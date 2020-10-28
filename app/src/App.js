@@ -1,7 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-
-// import UserCard from './UserCard'
 import './App.css';
 
 class App extends React.Component {
@@ -40,6 +38,9 @@ class App extends React.Component {
       <div className="app">
         <h1>Github Cards</h1>
         <div className="card">
+          <div className="img">
+            <img src={this.state.userData.avatar_url} alt="User Avator"></img>
+          </div>
           <div className="info">
             <h4 className="name">{this.state.userData.name}</h4>
             <h5 className="username">{this.state.userData.login}</h5>
@@ -53,9 +54,6 @@ class App extends React.Component {
             </ul>
             <p><span>Following:</span> {this.state.userData.following}</p>
             <p><span>Bio:</span> {this.state.userData.bio}</p>
-          </div>
-          <div className="img">
-            <img src={this.state.userData.avatar_url} alt="User Avator"></img>
           </div>
         </div>
       </div>
